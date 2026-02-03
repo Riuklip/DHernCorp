@@ -5,22 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DHern Corp | Pray, Build, Bless</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="Images/Isotipo.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="Images/Isotipo.ico" type="image/x-icon"> 
     <link rel="stylesheet" href="styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
 </head>
 <body>
-
     <header>
-        <div class="logo"><img src="Images/logo.png" alt=""></div>
+        <div class="logo">
+            <a href="#home" style="display:flex; align-items:center; gap:10px; color:white; text-decoration:none;">
+                <img src="Images/logo.png" alt="DHern Corp Logo">
+            </a>
+        </div>
         
-        <button class="hamburger" id="hamburger">
+        <button class="hamburger" id="hamburger" aria-label="Menu">
             <span></span>
             <span></span>
             <span></span>
@@ -29,7 +26,6 @@
         <ul class="nav-menu" id="nav-menu">
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Our Brands</a></li>
-            <li><a href="#about">Philosophy</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </header>
@@ -40,14 +36,12 @@
             <h1>Building a Lasting Legacy</h1>
         </section>
         
-
-    <section class="services" id="services">
-        <div class="section-title">
-            <h2>Our Business Units</h2>
-        </div>
-        
-        <div class="carousel-container">
-              <div class="carousel-indicators">
+        <section class="services" id="services">
+            <div class="section-title">
+                <h2>Our Business Units</h2>
+            </div>
+            
+            <div class="carousel-indicators">
                 <button class="indicator-btn active" data-slide="0">Home Improvements</button>
                 <button class="indicator-btn" data-slide="1">Cleaning Services</button>
                 <button class="indicator-btn" data-slide="2">Family Trust</button>
@@ -55,376 +49,99 @@
                 <button class="indicator-btn" data-slide="4">Outdoor Services</button>
                 <button class="indicator-btn" data-slide="5">Holdings LLC</button>
             </div>
-            <div class="separad"></div>
-            <div class="carousel">
-                <!-- Card 1: D.L.H. Home Improvements -->
-                <div class="carousel-card">
-                    <div class="card-content">
-                        <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1618832515490-e181c4794a45?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Home Improvements">
-                        </div>
-                        <div class="card-body">
-                            <h3>D.L.H. Home Improvements</h3>
-                            <p>Expert craftsmanship for residential renovations, ensuring your home reflects your vision.</p>
-                            
-                            <button class="info-toggle" data-card="1">
-                                <i class="fas fa-chevron-down"></i> More Details
-                            </button>
-                            
-                            <div class="extended-info" id="info-1">
-                                <p>Specializing in kitchen and bathroom remodels, room additions, and whole-house renovations. Our team of licensed contractors ensures every project meets the highest standards of quality and safety.</p>
-                                <ul>
-                                    <li><strong>Services:</strong> Kitchen & Bath Remodels, Additions, Basement Finishing</li>
-                                    <li><strong>Coverage:</strong> Residential projects in the tri-state area</li>
-                                    <li><strong>Warranty:</strong> 5-year craftsmanship warranty on all projects</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="contact-links">
-                                <a href="tel:+15551234567" class="contact-btn primary">
-                                    <i class="fas fa-phone-alt"></i> Call Now
-                                </a>
-                                <a href="mailto:homeimprovements@dherncorp.com" class="contact-btn secondary">
-                                    <i class="fas fa-envelope"></i> Email Us
-                                </a>
-                                <a href="#quote-form" class="contact-btn primary">
-                                    <i class="fas fa-file-signature"></i> Get Quote
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Card 2: S&DH Cleaning Services -->
-                <div class="carousel-card">
-                    <div class="card-content">
-                        <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1563453392212-326f5e854473?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="cleaning">
-                        </div>
-                        <div class="card-body">
-                            <h3>S&DH Cleaning Services</h3>
-                            <p>Professional residential and commercial cleaning with a focus on detail and trust.</p>
-                            
-                            <button class="info-toggle" data-card="2">
-                                <i class="fas fa-chevron-down"></i> More Details
-                            </button>
-                            
-                            <div class="extended-info" id="info-2">
-                                <p>Eco-friendly cleaning solutions for homes and businesses. We use non-toxic, biodegradable products that are safe for children, pets, and the environment while delivering exceptional cleaning results.</p>
-                                <ul>
-                                    <li><strong>Services:</strong> Residential, Commercial, Post-Construction, Move-in/Move-out</li>
-                                    <li><strong>Eco-Friendly:</strong> All products are non-toxic and biodegradable</li>
-                                    <li><strong>Flexibility:</strong> One-time, weekly, bi-weekly, or monthly schedules</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="contact-links">
-                                <a href="tel:+15551234568" class="contact-btn primary">
-                                    <i class="fas fa-phone-alt"></i> Schedule Clean
-                                </a>
-                                <a href="mailto:cleaning@dherncorp.com" class="contact-btn secondary">
-                                    <i class="fas fa-envelope"></i> Request Quote
-                                </a>
-                                <a href="#services" class="contact-btn primary">
-                                    <i class="fas fa-calendar-alt"></i> View Plans
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Card 3: Hernandez Family Trust -->
-                <div class="carousel-card">
-                    <div class="card-content">
-                        <div class="card-image">
-                            <div class="missing-img-placeholder">
-                                <span>Hernandez Family Trust</span>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h3>Hernandez Family Trust</h3>
-                            <p>Strategic asset management and legacy planning for the future of your family.</p>
-                            
-                            <button class="info-toggle" data-card="3">
-                                <i class="fas fa-chevron-down"></i> More Details
-                            </button>
-                            
-                            <div class="extended-info" id="info-3">
-                                <p>Comprehensive wealth management services including estate planning, trust administration, investment management, and tax optimization strategies to preserve and grow family assets across generations.</p>
-                                <ul>
-                                    <li><strong>Services:</strong> Estate Planning, Trust Administration, Investment Management</li>
-                                    <li><strong>Assets Under Management:</strong> $50M+</li>
-                                    <li><strong>Specialization:</strong> Multi-generational wealth preservation</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="contact-links">
-                                <a href="mailto:trust@dherncorp.com" class="contact-btn primary">
-                                    <i class="fas fa-envelope"></i> Contact Advisor
-                                </a>
-                                <a href="#consultation" class="contact-btn secondary">
-                                    <i class="fas fa-handshake"></i> Schedule Consultation
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Card 4: TeamHern Fitness -->
-                <div class="carousel-card">
-                    <div class="card-content">
-                        <div class="card-image">
-                            <img src="https://images.unsplash.com/photo-1623874514711-0f321325f318?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fGd5bXxlbnwwfHwwfHx8MA%3D%3D" alt="Gym">
-                        </div>
-                        <div class="card-body">
-                            <h3>TeamHern Fitness</h3>
-                            <p>Empowering health and performance through personalized training and wellness programs.</p>
-                            
-                            <button class="info-toggle" data-card="4">
-                                <i class="fas fa-chevron-down"></i> More Details
-                            </button>
-                            
-                            <div class="extended-info" id="info-4">
-                                <p>State-of-the-art fitness facility with certified personal trainers, nutrition counseling, and specialized programs for weight loss, strength training, athletic performance, and senior fitness.</p>
-                                <ul>
-                                    <li><strong>Facilities:</strong> 15,000 sq ft gym, pool, sauna, basketball court</li>
-                                    <li><strong>Programs:</strong> Personal Training, Group Classes, Nutrition Plans</li>
-                                    <li><strong>Specialty:</strong> Post-rehab training and senior fitness programs</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="contact-links">
-                                <a href="tel:+15551234569" class="contact-btn primary">
-                                    <i class="fas fa-phone-alt"></i> Call Gym
-                                </a>
-                                <a href="#tour" class="contact-btn secondary">
-                                    <i class="fas fa-dumbbell"></i> Schedule Tour
-                                </a>
-                                <a href="#membership" class="contact-btn primary">
-                                    <i class="fas fa-id-card"></i> Membership Info
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Card 5: Moss Outdoor Services -->
-                <div class="carousel-card">
-                    <div class="card-content">
-                        <div class="card-image">
-                            <div class="missing-img-placeholder">
-                                <span>Moss Outdoor Services</span>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h3>Moss Outdoor Services</h3>
-                            <p>Premium landscaping and outdoor maintenance to elevate your property's curb appeal.</p>
-                            
-                            <button class="info-toggle" data-card="5">
-                                <i class="fas fa-chevron-down"></i> More Details
-                            </button>
-                            
-                            <div class="extended-info" id="info-5">
-                                <p>Full-service landscaping company offering design, installation, and maintenance services for residential and commercial properties. Specializing in sustainable, water-wise landscaping solutions.</p>
-                                <ul>
-                                    <li><strong>Services:</strong> Landscape Design, Installation, Maintenance, Irrigation</li>
-                                    <li><strong>Specialization:</strong> Drought-resistant and native plant landscapes</li>
-                                    <li><strong>Seasonal:</strong> Snow removal and holiday lighting services</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="contact-links">
-                                <a href="tel:+15551234570" class="contact-btn primary">
-                                    <i class="fas fa-phone-alt"></i> Call for Estimate
-                                </a>
-                                <a href="mailto:landscaping@dherncorp.com" class="contact-btn secondary">
-                                    <i class="fas fa-envelope"></i> Email Us
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Card 6: Amiel's Holding (LLC) -->
-                <div class="carousel-card">
-                    <div class="card-content">
-                        <div class="card-image">
-                            <div class="missing-img-placeholder">
-                                <span>Amiel's Holding LLC</span>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h3>Amiel's Holding (LLC)</h3>
-                            <p>Corporate investment vehicle managing the diverse interests of the DHern Corp portfolio.</p>
-                            
-                            <button class="info-toggle" data-card="6">
-                                <i class="fas fa-chevron-down"></i> More Details
-                            </button>
-                            
-                            <div class="extended-info" id="info-6">
-                                <p>Strategic holding company that oversees investments across multiple sectors including real estate, technology startups, and sustainable energy projects. Focused on long-term growth and diversification.</p>
-                                <ul>
-                                    <li><strong>Focus Areas:</strong> Real Estate, Tech Startups, Sustainable Energy</li>
-                                    <li><strong>Portfolio:</strong> 12 active investments across 3 sectors</li>
-                                    <li><strong>Strategy:</strong> Long-term growth with measured risk exposure</li>
-                                </ul>
-                            </div>
-                            
-                            <div class="contact-links">
-                                <a href="mailto:investments@dherncorp.com" class="contact-btn primary">
-                                    <i class="fas fa-envelope"></i> Investment Inquiries
-                                </a>
-                                <a href="#partnership" class="contact-btn secondary">
-                                    <i class="fas fa-briefcase"></i> Partnership Opportunities
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
             
-
+            <div class="separador"></div>
             
+            <div class="carousel-container-outer">
+                
+                <div class="carousel-wrapper">
+                    <div id="business-carousel">
+                        </div>
+                </div>
 
-        </div>
-    </section>
+            </div>
+        </section>
 
-   
+        <section class="contact" id="contact">
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Contact Us</h3>
+                    <div class="contact-detail">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="contact-text">
+                            <h4>Location</h4>
+                            <p>Caibarién, Villa Clara</p>
+                        </div>
+                    </div>
+                    <div class="contact-detail">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="contact-text">
+                            <h4>Email</h4>
+                            <p><a href="mailto:eliclpere@gmail.com" style="color:inherit;">eliclpere@gmail.com</a></p>
+                        </div>
+                    </div>
+                </div>
 
-        <section class="contact" id="contacto">
-      <div class="container contact-container">
-        <div class="contact-info">
-          <h3>Contacto</h3>
-          <div class="contact-detail">
-            <div class="contact-icon">
-              <i class="fas fa-map-marker-alt"></i>
+                <div class="contact-form">
+                    <h3>Send a message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Select a service</label>
+                            <select id="service" required>
+                                <option value="">Select service</option>
+                                <option value="home-improvements">Home Improvements</option>
+                                <option value="cleaning">Cleaning Services</option>
+                                <option value="trust">Family Trust</option>
+                                <option value="fitness">Fitness</option>
+                                <option value="outdoor">Outdoor Services</option>
+                                <option value="holdings">Holdings LLC</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Details</label>
+                            <textarea id="message" placeholder="How can we help you?"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
+                </div>
             </div>
-            <div class="contact-text">
-              <h4>Ubicación</h4>
-              <p>Caibarién, Villa Clara</p>
-            </div>
-          </div>
-
-          <div class="contact-detail">
-            <div class="contact-icon">
-              <i class="fas fa-phone-alt"></i>
-            </div>
-            <div class="contact-text">
-              <h4>Teléfono</h4>
-              <p>+53 56096338</p>
-            </div>
-          </div>
-
-          <div class="contact-detail">
-            <div class="contact-icon">
-              <i class="fas fa-envelope"></i>
-            </div>
-            <div class="contact-text">
-              <h4>Email</h4>
-              <p>eliclpere@gmail.com</p>
-            </div>
-          </div>
-
-          <div class="contact-detail">
-            <div class="contact-icon">
-              <i class="fas fa-clock"></i>
-            </div>
-            <div class="contact-text">
-              <h4>Horario</h4>
-              <p>Lun-Vie: 18:00 - 22:00</p>
-              <p>Sáb: 9:00 - 22:00</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-form">
-          <h3></h3>
-          <form>
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" required />
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" required />
-            </div>
-            <div class="form-group">
-              <label for="phone">Phone Numbre</label>
-              <input type="text" id="phone" required />
-            </div>
-
-            <div class="form-group">
-              <label for="service">Select a service</label>
-              <select id="service" required>
-                <option value="">Seleccionar servicio</option>
-                <option value="diseno">Marketing Digital</option>
-                <option value="desarrollo">Desarrollo Web</option>
-                <option value="reparacion">Soporte Técnico</option>
-                <option value="otro">Otro servicio</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="message">Details</label>
-              <textarea id="message" placeholder="Optional" required></textarea>
-            </div>
-
-            <button type="submit" class="btn">Send</button>
-          </form>
-        </div>
-      </div>
-    </section>
+        </section>
     </main>
 
     <footer>
-      <div class="container footer-container">
-        <div class="footer-col">
-          <h4>DHernCorp</h4>
-          <p class="description">
-            DHern Corp is a diversified multi-industry leader dedicated to enhancing quality of life through professional craftsmanship, personalized wellness, and strategic financial stewardship.
-          </p>
-          <div class="social-links">
-            <!-- <a target="_blank" href="https://www.linkedin.com/in/eli-carlos-leiva-p%C3%A9rez-6a255628a/"
-              ><i class="fab fa-linkedin-in"></i
-            ></a>
-            <a href="https://github.com/Riuklip" target="_blank"><i class="fab fa-github"></i></a> -->
-            <a target="_blank" href="https://www.instagram.com/innovtech_caib/"><i class="fab fa-instagram"></i></a>
-            <a target="_blank" href="https://www.facebook.com/profile.php?id=61586661478313"><i class="fab fa-facebook"></i></a>
-          </div>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>DHernCorp</h4>
+                <p class="description">
+                    DHern Corp is a diversified multi-industry leader dedicated to enhancing quality of life through professional craftsmanship, personalized wellness, and strategic financial stewardship.
+                </p>
+                <div class="social-links">
+                    <a target="_blank" href="https://www.instagram.com/innovtech_caib/"><i class="fab fa-instagram"></i></a>
+                    <a target="_blank" href="https://www.facebook.com/profile.php?id=61586661478313"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Our Brands</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div> 
+        <div class="copyright">
+            <p>&copy; 2025 DHernCorp. All rights reserved.</p>
         </div>
-
-        <div class="footer-col">
-          <h4>Links</h4>
-          <ul class="footer-links">
-            <li><a href="#home">Home</a></li>
-         
-            <li><a href="#marca">Our Brand</a></li>
-      
-            <li><a href="#Philosophy">Philosophy</a></li>
-            <li><a href="#contacto">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Services</h4>
-          <ul class="footer-links No_hover">
-      
-            <li><a href="#">Marketing Digital</a></li>
-            <li><a href="#">Desarrollo Web</a></li>
-            <li><a href="#">Soporte Técnico</a></li>
-          </ul>
-        </div>
-      </div> 
-      
-    
-      <div class="copyright">
-        <p>&copy; 2025 DHernCorp.</p>
-      </div>
     </footer>
 
-    <script src="script.js">
-
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
