@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     description: "Specializing in kitchen and bathroom remodels, room additions, and whole-house renovations.",
                     listItems: ["Kitchen & Bath Remodels", "Room Additions", "5-year warranty"]
                 },
-                contactEmail: "homeimprovements@dherncorp.com"
+                contactEmail: "eliclpere@gmail.com"
             },
             {
                 id: 2,
@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     description: "Eco-friendly cleaning solutions using non-toxic products safe for children and pets.",
                     listItems: ["Residential & Commercial", "Move-in/Move-out", "Eco-friendly products"]
                 },
-                contactEmail: "cleaning@dherncorp.com"
+                contactEmail: "eliclpere@gmail.com"
             },
             {
                 id: 3,
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     description: "Comprehensive wealth management, estate planning and trust administration.",
                     listItems: ["Estate Planning", "Investment Management", "Multi-generational wealth"]
                 },
-                contactEmail: "trust@dherncorp.com"
+                contactEmail: "eliclpere@gmail.com"
             },
             {
                 id: 4,
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     description: "State-of-the-art facility with certified trainers and nutrition counseling.",
                     listItems: ["Personal Training", "Group Classes", "Nutrition Plans"]
                 },
-                contactEmail: "fitness@dherncorp.com"
+                contactEmail: "eliclpere@gmail.com"
             },
             {
                 id: 5,
@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     description: "Full-service landscaping, design, and maintenance for residential properties.",
                     listItems: ["Landscape Design", "Lawn Maintenance", "Snow Removal"]
                 },
-                contactEmail: "landscaping@dherncorp.com"
+                contactEmail: "eliclpere@gmail.com"
             },
             {
                 id: 6,
@@ -464,4 +464,44 @@ document.addEventListener('DOMContentLoaded', () => {
     // Inicializar Reseñas
     renderReviews();
     startReviewSlider();
+
+    //Formulario de contacto
+    emailjs.init("SjO1Xf_HPHQgbHemB");
+    const contactForm = document.querySelector(".contact-form form");
+    if (contactForm) {
+  contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Validación
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const service = document.getElementById("service").value;
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !email || !service || !message) {
+      alert("Please, complete all the required data");
+      return;
+    }
+
+    // Envío con EmailJS
+    emailjs.send("service_2cgi42s","template_8aho7et");
+    emailjs
+      .send("service_2cgi42s", "template_8aho7et", {
+        name: name,
+        email: email,
+        message: `I need a service from:${service}\n\nDetails:${message}\n\n`, // Formato mejorado
+      })
+      .then(
+        () => {
+          alert("¡Message Sent! We will contact you soon, thanks.");
+          contactForm.reset();
+        },
+        (error) => {
+          console.error("Error de EmailJS:", error);
+          alert("Sending Error. Please try again.");
+        }
+      );
+  });
+}
+    
 });
