@@ -28,21 +28,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 3,
                 title: "Hernandez Family Trust",
                 shortDesc: "Strategic asset management and legacy planning for the future of your family.",
-                imageUrl:"Images/handshake.png", // Sin imagen, usará placeholder
+                imageUrl:"Images/HandShake.png", // Sin imagen, usará placeholder
                 extendedInfo: {
                     description: "Comprehensive wealth management, estate planning and trust administration.",
                     listItems: ["Estate Planning", "Investment Management", "Multi-generational wealth"]
-                },
-                contactEmail: "eliclpere@gmail.com"
-            },
-            {
-                id: 4,
-                title: "TeamHern Fitness",
-                shortDesc: "Empowering health and performance through personalized training programs.",
-                imageUrl: "Images/samuel-girven-fqMu99l8sqo-unsplash(1).jpg",
-                extendedInfo: {
-                    description: "State-of-the-art facility with certified trainers and nutrition counseling.",
-                    listItems: ["Personal Training", "Group Classes", "Nutrition Plans"]
                 },
                 contactEmail: "eliclpere@gmail.com"
             },
@@ -70,8 +59,18 @@ document.addEventListener('DOMContentLoaded', () => {
             "Secure Short-term Storage"
         ]
     },
-    contactEmail: "eliclpere@gmail.com"
-}
+    contactEmail: "moves@dherncorp.com"
+},{
+                id: 4,
+                title: "TeamHern Fitness",
+                shortDesc: "Empowering health and performance through personalized training programs.",
+                imageUrl: "Images/samuel-girven-fqMu99l8sqo-unsplash(1).jpg",
+                extendedInfo: {
+                    description: "State-of-the-art facility with certified trainers and nutrition counseling.",
+                    listItems: ["Personal Training", "Group Classes", "Nutrition Plans"]
+                },
+                contactEmail: "eliclpere@gmail.com"
+            }
         ]
     };
 
@@ -203,8 +202,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }, {passive: true});
 
     function handleSwipe() {
-        if (touchStartX - touchEndX > 80) nextSlide();
-        if (touchEndX - touchStartX > 80) prevSlide();
+        if (touchStartX - touchEndX > 50) nextSlide();
+        if (touchEndX - touchStartX > 50) prevSlide();
     }
 
     // Menú Hamburguesa
@@ -504,5 +503,4 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 }
     
-
 });
