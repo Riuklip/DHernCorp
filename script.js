@@ -28,7 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 3,
                 title: "Hernandez Family Trust",
                 shortDesc: "Strategic asset management and legacy planning for the future of your family.",
-                imageUrl: null, // Sin imagen, usará placeholder
+                imageUrl:"Images/handshake.png", // Sin imagen, usará placeholder
                 extendedInfo: {
                     description: "Comprehensive wealth management, estate planning and trust administration.",
                     listItems: ["Estate Planning", "Investment Management", "Multi-generational wealth"]
@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 4,
                 title: "TeamHern Fitness",
                 shortDesc: "Empowering health and performance through personalized training programs.",
-                imageUrl: "https://images.unsplash.com/photo-1623874514711-0f321325f318?w=600&auto=format&fit=crop",
+                imageUrl: "Images/samuel-girven-fqMu99l8sqo-unsplash(1).jpg",
                 extendedInfo: {
                     description: "State-of-the-art facility with certified trainers and nutrition counseling.",
                     listItems: ["Personal Training", "Group Classes", "Nutrition Plans"]
@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 5,
                 title: "Moss Outdoor Services",
                 shortDesc: "Premium landscaping and outdoor maintenance to elevate your property.",
-                imageUrl: null,
+                imageUrl: "Images/doug-vos-HEHjFvFHpr8-unsplash.jpg",
                 extendedInfo: {
                     description: "Full-service landscaping, design, and maintenance for residential properties.",
                     listItems: ["Landscape Design", "Lawn Maintenance", "Snow Removal"]
@@ -59,15 +59,19 @@ document.addEventListener('DOMContentLoaded', () => {
             },
             {
                 id: 6,
-                title: "Amiel's Holding (LLC)",
-                shortDesc: "Corporate investment vehicle managing the diverse interests of the portfolio.",
-                imageUrl: null,
-                extendedInfo: {
-                    description: "Overseeing investments across real estate, technology, and sustainable energy.",
-                    listItems: ["Real Estate", "Tech Startups", "Sustainable Growth"]
-                },
-                contactEmail: "investments@dherncorp.com"
-            }
+    title: "Amiel's Holdings (LLC)",
+    shortDesc: "Your trusted partner for stress-free residential and commercial moving services.",
+    imageUrl: "Images/camion.png",
+    extendedInfo: {
+        "description": "Providing professional relocation solutions with a focus on safety, efficiency, and reliability across the nation.",
+        "listItems": [
+            "Residential & Commercial Moving",
+            "Packing & Unpacking Services",
+            "Secure Short-term Storage"
+        ]
+    },
+    contactEmail: "moves@dherncorp.com"
+}
         ]
     };
 
@@ -223,4 +227,241 @@ document.addEventListener('DOMContentLoaded', () => {
     // 6. Inicialización
     generateCards();
     updateCarousel();
+    /* --- RESEÑAS / TESTIMONIALS LOGIC --- */
+    
+    // 1. Datos iniciales "Fake"
+// 1. Datos iniciales "Fake" (Ampliado para no repetir)
+    const reviewsData = [
+        {
+            name: "Sarah Jenkins",
+            rating: 5,
+            text: "D.L.H. Home Improvements transformed our kitchen completely. The team was professional, clean, and finished on time. Highly recommended!"
+        },
+        {
+            name: "Michael Rodriguez",
+            rating: 5,
+            text: "I've been using S&DH Cleaning for my office for a year now. The attention to detail is unmatched. Best cleaning service in the area."
+        },
+        {
+            name: "Emily Clark",
+            rating: 4,
+            text: "TeamHern Fitness helped me get back in shape after my surgery. The personalized plan was exactly what I needed. Great trainers!"
+        },
+        {
+            name: "David H.",
+            rating: 5,
+            text: "The Family Trust planning service gave us peace of mind. Very knowledgeable team that explained complex terms simply."
+        },
+        {
+            name: "Amanda Lewis",
+            rating: 5,
+            text: "Moss Outdoor Services did an amazing job with our landscaping design. Our curb appeal has never been better."
+        },
+        {
+            name: "Robert Turner",
+            rating: 5,
+            text: "Professionalism runs in the family. I've used both their cleaning and outdoor services, and the quality is consistent across the board."
+        },
+        {
+            name: "Jessica P.",
+            rating: 4,
+            text: "Reliable and trustworthy. Had a small issue with scheduling once, but they resolved it immediately and gave me a discount."
+        },
+        {
+            name: "Carlos M.",
+            rating: 5,
+            text: "The renovation crew respected my home and my time. They cleaned up every day before leaving. A+ service."
+        },
+        {
+            name: "Linda White",
+            rating: 5,
+            text: "I never thought I'd enjoy working out, but the group classes at TeamHern are actually fun. I've lost 15lbs so far!"
+        },
+        {
+            name: "James Wilson",
+            rating: 5,
+            text: "Setting up a trust seemed daunting, but the Hernandez team made it seamless. I feel much more secure about my family's future."
+        },
+        {
+            name: "Karen Miller",
+            rating: 5,
+            text: "Eco-friendly cleaning products were a must for me because of my dogs. S&DH delivered exactly what they promised."
+        },
+        {
+            name: "Brian Scott",
+            rating: 4,
+            text: "Great lawn maintenance. They show up on time and the lines are always straight. Good value for the price."
+        },
+        {
+            name: "Patricia Green",
+            rating: 5,
+            text: "They built a beautiful deck for our backyard. We spend every evening out there now. Thank you D.L.H.!"
+        },
+        {
+            name: "Tom Baker",
+            rating: 5,
+            text: "Honest business people. Hard to find that these days. Whether it's advice or a service, they give it to you straight."
+        },
+        {
+            name: "Sophie Turner",
+            rating: 5,
+            text: "My move-out cleaning was perfect. Got my full security deposit back thanks to their deep cleaning service."
+        },
+        {
+            name: "Kevin Adams",
+            rating: 5,
+            text: "Investment guidance was spot on. They look at the big picture, not just quick wins."
+        },
+        {
+            name: "Rebecca N.",
+            rating: 4,
+            text: "The snow removal service saved me this winter. My driveway was clear before I even woke up for work."
+        },
+        {
+            name: "Daniel Lee",
+            rating: 5,
+            text: "Renovated our master bath. It feels like a spa now. The tile work is exquisite."
+        },
+        {
+            name: "Grace Kim",
+            rating: 5,
+            text: "I appreciate a company that holds Christian values. It shows in how they treat their customers and their staff."
+        },
+        {
+            name: "Mark Johnson",
+            rating: 5,
+            text: "Top tier service from start to finish. Highly responsive communication."
+        }
+    ];
+
+    const reviewsTrack = document.getElementById('reviews-track');
+    let reviewIndex = 0;
+    let reviewsInterval;
+
+    // 2. Función para renderizar las estrellas (Visualización)
+    function getStarsHTML(rating) {
+        let stars = '';
+        for (let i = 1; i <= 5; i++) {
+            if (i <= rating) {
+                stars += '<i class="fas fa-star"></i>'; // Estrella llena
+            } else {
+                stars += '<i class="far fa-star"></i>'; // Estrella vacía
+            }
+        }
+        return stars;
+    }
+
+    // 3. Renderizar Reseñas en el DOM
+    function renderReviews() {
+        reviewsTrack.innerHTML = '';
+        reviewsData.forEach(review => {
+            const card = document.createElement('div');
+            card.className = 'review-card';
+            card.innerHTML = `
+                <div class="review-stars">${getStarsHTML(review.rating)}</div>
+                <p class="review-text">"${review.text}"</p>
+                <p class="review-author">- ${review.name}</p>
+            `;
+            reviewsTrack.appendChild(card);
+        });
+    }
+
+    // 4. Lógica del Slider Automático (SetInterval)
+    function startReviewSlider() {
+        // Limpiamos intervalo previo para evitar duplicados si se llama varias veces
+        if (reviewsInterval) clearInterval(reviewsInterval);
+        
+        reviewsInterval = setInterval(() => {
+            reviewIndex++;
+            // Si llegamos al final, volvemos al principio suavemente
+            if (reviewIndex >= reviewsData.length) {
+                reviewIndex = 0;
+            }
+            updateReviewPosition();
+        }, 3000); // 3 segundos
+    }
+
+    function updateReviewPosition() {
+        const percentage = -(reviewIndex * 100);
+        reviewsTrack.style.transform = `translateX(${percentage}%)`;
+    }
+
+    // Pausar el slider cuando el mouse está encima (Mejora de UX)
+    const reviewsDisplay = document.querySelector('.reviews-display');
+    reviewsDisplay.addEventListener('mouseenter', () => clearInterval(reviewsInterval));
+    reviewsDisplay.addEventListener('mouseleave', startReviewSlider);
+
+    // 5. Lógica del Formulario (Añadir reseña en tiempo real)
+    
+    // a) Manejo de estrellas en el formulario (Input visual)
+    const starInputs = document.querySelectorAll('.star-rating-input i');
+    const ratingValueInput = document.getElementById('review-rating');
+
+    starInputs.forEach(star => {
+        star.addEventListener('click', () => {
+            const value = parseInt(star.getAttribute('data-value'));
+            ratingValueInput.value = value;
+            
+            // Actualizar visualmente
+            starInputs.forEach(s => {
+                const sVal = parseInt(s.getAttribute('data-value'));
+                if (sVal <= value) {
+                    s.classList.remove('far');
+                    s.classList.add('fas', 'active');
+                } else {
+                    s.classList.remove('fas', 'active');
+                    s.classList.add('far');
+                }
+            });
+        });
+    });
+    
+    // Inicializar estrellas del formulario en 5
+    starInputs.forEach(s => s.classList.add('fas', 'active'));
+
+    // b) Submit del formulario
+    const reviewForm = document.getElementById('review-form');
+    
+    reviewForm.addEventListener('submit', (e) => {
+        e.preventDefault(); // Evitar recarga de página
+
+        // Capturar datos
+        const name = document.getElementById('review-name').value;
+        const text = document.getElementById('review-text').value;
+        const rating = parseInt(document.getElementById('review-rating').value);
+
+        // Crear objeto
+        const newReview = {
+            name: name,
+            text: text,
+            rating: rating
+        };
+
+        // Añadir al INICIO del array (unshift) para que sea la primera en verse
+        reviewsData.unshift(newReview);
+
+        // Re-renderizar carrusel
+        renderReviews();
+        
+        // Resetear la posición al inicio para ver la nueva reseña
+        reviewIndex = 0;
+        updateReviewPosition();
+
+        // Reiniciar el timer para que el usuario tenga tiempo de ver su reseña
+        clearInterval(reviewsInterval);
+        startReviewSlider();
+
+        // Limpiar formulario y dar feedback visual
+        reviewForm.reset();
+        
+        // Reset estrellas visuales a 5
+        starInputs.forEach(s => s.classList.add('fas', 'active'));
+        ratingValueInput.value = 5;
+
+        alert('Thank you! Your review has been posted.');
+    });
+
+    // Inicializar Reseñas
+    renderReviews();
+    startReviewSlider();
 });
