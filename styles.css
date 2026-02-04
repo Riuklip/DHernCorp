@@ -114,7 +114,7 @@ header {
 }
 
 .hero h1 { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; margin-bottom: 1rem; }
-.hero p { font-size: 1.2rem; text-transform: uppercase; letter-spacing: 4px; color: var(--primary-blue); font-weight: 700; }
+.hero p { font-size: 1.2rem; text-transform: uppercase; letter-spacing: 4px; color:white; font-weight: 700; }
 
 /* --- SERVICES SECTION --- */
 .services {
@@ -529,4 +529,5 @@ footer { background: var(--black); color: var(--white); padding: 60px 5% 20px; }
     .review-card {
         padding: 1.5rem;
     }
+
 }
