@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
             "Secure Short-term Storage"
         ]
     },
-    contactEmail: "moves@dherncorp.com"
+    contactEmail: "eliclpere@gmail.com"
 }
         ]
     };
@@ -203,8 +203,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }, {passive: true});
 
     function handleSwipe() {
-        if (touchStartX - touchEndX > 50) nextSlide();
-        if (touchEndX - touchStartX > 50) prevSlide();
+        if (touchStartX - touchEndX > 80) nextSlide();
+        if (touchEndX - touchStartX > 80) prevSlide();
     }
 
     // Menú Hamburguesa
@@ -504,4 +504,5 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 }
     
+
 });
